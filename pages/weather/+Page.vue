@@ -6,8 +6,10 @@ const data = useData<Data>()
 
 const handleCityOnChange = (e: Event) => {
   const cityValue = (e.target as HTMLOptionElement).value
+const baseUrl = import.meta.env.PUBLIC_ENV__BASE_URL ?? ""
+
   if (cityValue) {
-    navigate(`/weather/${cityValue}`)
+    navigate(`${baseUrl}/weather/${cityValue}`)
   }
 }
 </script>
