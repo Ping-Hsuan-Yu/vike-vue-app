@@ -11,4 +11,5 @@ export default defineConfig({
     }),
     md({}),
   ],
+  base: "/vike-vue-app/",
 });
