@@ -2,9 +2,9 @@
   <div class="layout">
     <Sidebar>
       <Logo />
-      <Link href="/"> Welcome </Link>
-      <Link href="/todo"> Todo </Link>
-      <Link href="/star-wars"> Data Fetching </Link>
+      <Link :href="`${baseUrl}/`"> Welcome </Link>
+      <Link :href="`${baseUrl}/todo`">To-Do List</Link>
+      <Link :href="`${baseUrl}/weather`">Data Fetching</Link>
     </Sidebar>
     <Content><slot /></Content>
   </div>
@@ -15,6 +15,8 @@ import Content from "../components/Content.vue";
 import Link from "../components/Link.vue";
 import Logo from "../components/Logo.vue";
 import Sidebar from "../components/Sidebar.vue";
+
+const baseUrl = import.meta.env.PUBLIC_ENV__BASE_URL ?? ""
 </script>
 
 <style>

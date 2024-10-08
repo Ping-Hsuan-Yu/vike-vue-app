@@ -5,7 +5,7 @@ import vike from "vike/plugin";
 
 export default defineConfig({
   plugins: [
-    vike({}),
+    vike({ prerender: true }),
     vue({
       include: [/\.vue$/, /\.md$/],
     }),
