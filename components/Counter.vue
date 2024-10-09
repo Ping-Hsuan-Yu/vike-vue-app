@@ -1,22 +1,12 @@
 <template>
-  <button
-    type="button"
-    class="inline-block border border-black rounded bg-gray-200 px-2 py-1 text-xs font-medium uppercase leading-normal"
-    @click="state.count++"
-  >
+  <Button 
+    :onClick="()=>state.count++">
     Counter {{ state.count }}
-  </button>
+  </Button>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import { reactive } from "vue";
-
-export default {
-  setup() {
-    const state = reactive({ count: 0 });
-    return {
-      state,
-    };
-  },
-};
+const state = reactive({ count: 0 });
+import Button from "./Button.vue"
 </script>

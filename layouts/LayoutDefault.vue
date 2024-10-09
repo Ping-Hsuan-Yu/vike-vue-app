@@ -9,7 +9,13 @@
     <Content><slot /></Content>
   </div>
 </template>
+<script lang="ts">
+import Counter from "../components/Counter.vue";
+import Title from "../components/Title.vue";
 
+const components = { Counter,Title };
+export default { components };
+</script>
 <script lang="ts" setup>
 import Content from "../components/Content.vue";
 import Link from "../components/Link.vue";

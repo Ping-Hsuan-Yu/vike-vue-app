@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import { navigate } from 'vike/client/router'
 import { useData } from "vike-vue/useData"
-import type { Data } from './+data'
+import type { Data } from '../+data'
 const data = useData<Data>()
 
 const handleCityOnChange = (e: Event) => {
   const cityValue = (e.target as HTMLOptionElement).value
-const baseUrl = import.meta.env.PUBLIC_ENV__BASE_URL ?? ""
-
+  const baseUrl = import.meta.env.PUBLIC_ENV__BASE_URL ?? ""
   if (cityValue) {
     navigate(`${baseUrl}/weather/${cityValue}`)
   }

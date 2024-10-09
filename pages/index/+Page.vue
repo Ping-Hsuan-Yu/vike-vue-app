@@ -1,16 +1,17 @@
 <template>
-  <h1 class="font-bold text-3xl pb-4">My Vike app</h1>
-
-  This page is:
-  <ul>
-    <li>Rendered to HTML.</li>
-    <li>Interactive. <Counter /></li>
-  </ul>
+  <Title>My Vike app</Title>
+  <div class="flex flex-col gap-4">
+    <p class="text-1">This page is:</p>
+    <ul>
+      <li>Rendered to HTML.</li>
+      <li>Interactive.</li>
+    </ul>
+    <div>
+      <Counter />
+    </div>
+  </div>
 </template>
-
-<script lang="ts">
+<script lang="ts" setup>
+import Title from "../../components/Title.vue";
 import Counter from "../../components/Counter.vue";
-
-const components = { Counter };
-export default { components };
 </script>
