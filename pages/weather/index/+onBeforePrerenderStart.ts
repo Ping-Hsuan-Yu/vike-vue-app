@@ -11,4 +11,4 @@ const baseUrl = import.meta.env.PUBLIC_ENV__BASE_URL ?? ""
 
 export const onBeforePrerenderStart: OnBeforePrerenderStartAsync<Data> = async (): ReturnType<
   OnBeforePrerenderStartAsync<Data>
-> => (await data()).locationNameList.map(city=>`${baseUrl}/weather/${city}`);
+> => (await data()).locationNameList.map(city=>`/weather/${city}`);
